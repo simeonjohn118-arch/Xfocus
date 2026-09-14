@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X*FOCUS — Websites | Apps | Digital Solutions</title>
+  <meta name="description"
+    content="X*FOCUS: High-velocity digital experiences, bespoke 3D spatial web design, apps, and engineering solutions built for maximum conversions.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Bebas+Neue&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 3D Cinematic Background Canvas -->
+  <canvas id="cinema-canvas"></canvas>
+  <div class="canvas-vignette" aria-hidden="true"></div>
+
+  <!-- Main Website Interface Layer -->
+  <div class="app-container">
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar-header" id="navbar">
+      <div class="nav-inner">
+        <!-- Top Left Corner: Static Brand Logo -->
+        <div class="nav-brand" id="nav-brand-logo" role="button" tabindex="0" aria-label="X*FOCUS Home">
+          <div class="brand-logo-wrap">
+            <img src="brand-icon.png" alt="X*FOCUS 3D Emblem" class="brand-logo-img">
+          </div>
+          <span class="brand-name">
+            <span class="brand-name-x">X</span><span class="brand-name-star">*</span><span
+              class="brand-name-focus">FOCUS</span>
+          </span>
+        </div>
+
+        <!-- Floating Pill Center Navigation -->
+        <nav class="nav-pill-menu" id="nav-pill-container" aria-label="Main Navigation">
+          <button class="nav-pill-btn" data-nav="about">About</button>
+          <button class="nav-pill-btn" data-nav="services">Services</button>
+          <button class="nav-pill-btn active" data-nav="home">Home</button>
+          <button class="nav-pill-btn" data-nav="cases">My work</button>
+
+        </nav>
+
+
+
+    </header>
+
+    <!-- 3D Perspective Screw Float Stage Viewport -->
+    <div class="screw-stage-viewport" id="screw-stage-viewport">
+
+      <!-- STAGE 0: HERO (0% - 22% scroll) -->
+      <section class="screw-stage-card stage-hero active" id="stage-0" data-stage="0">
+        <div class="hero-content-wrapper">
+          <div class="hero-grid">
+
+            <!-- Left Column: Headline & Direct Actions -->
+            <div class="hero-left" id="hero-left-column">
+              <!-- Live Status Pill -->
+              <div class="status-pill">
+                <span class="status-dot"></span>
+                <span class="status-text">CREATIVE DESIGNER</span>
+              </div>
+
+              <!-- Main Title -->
+              <h1 class="hero-title" id="hero-main-heading">
+                <span class="title-line-1">I DESIGN.</span>
+                <span class="title-line-2">I BUILD.</span>
+                <span class="title-line-3">I CREATE WHAT'S NEXT</span>
+              </h1>
+
+              <!-- Subtitle -->
+              <p class="hero-subtitle" id="hero-subtitle">
+                No templates. Only strategy &amp; results.
+              </p>
+
+              <!-- CTA Buttons -->
+              <div class="hero-cta-group" id="hero-cta-group">
+                <button class="btn-secondary-dark btn-work-trigger" id="hero-cta-view-cases" data-trigger="view-work"
+                  aria-label="View Cases">
+                  <span class="btn-label">View my work ↗</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Column: Narrative Proposition & 2 Stat Boxes -->
+            <div class="hero-right" id="hero-right-column">
+              <div class="hero-narrative">
+                <div class="badge-tag">
+                  <i data-lucide="sparkles" class="badge-icon"></i>
+                  <span>Proven Impact</span>
+                </div>
+                <h2 class="narrative-heading" id="hero-right-heading">
+                  Think. Build. Evolve.
+                </h2>
+                <p class="narrative-desc" id="hero-right-description">
+                  Every project starts with an idea. I turn that idea into a carefully designed, intelligently
+                  engineered digital experience—and continuously push it further.
+                </p>
+              </div>
+
+              <!-- Exactly 2 Smaller Square Boxes -->
+              <div class="stat-boxes-grid" id="hero-two-square-boxes">
+                <!-- Square Box 1: Vision Manifesto Card -->
+                <div class="stat-card" id="square-box-1" role="button" tabindex="0"
+                  title="Read Vision: To shape what comes next" data-trigger="view-vision">
+                  <div class="card-header">
+                    <span class="card-icon-wrap">
+                      <i data-lucide="compass"></i>
+                    </span>
+                    <i data-lucide="arrow-up-right" class="card-arrow"></i>
+                  </div>
+                  <div class="card-stat-val card-stat-blue">vision</div>
+                  <div class="card-footer">
+                    <span class="card-label-title">To shape what comes next.</span>
+                    <span class="card-label-sub">Xfocus Manifesto</span>
+                  </div>
+                </div>
+
+                <!-- Square Box 2: Mission Manifesto Card -->
+                <div class="stat-card" id="square-box-2" role="button" tabindex="0"
+                  title="Read Mission: Transforming ideas into digital impact" data-trigger="view-mission">
+                  <div class="card-header">
+                    <span class="card-icon-wrap">
+                      <i data-lucide="target"></i>
+                    </span>
+                    <i data-lucide="arrow-up-right" class="card-arrow"></i>
+                  </div>
+                  <div class="card-stat-val card-stat-blue">Mission</div>
+                  <div class="card-footer">
+                    <span class="card-label-title">Transforming ideas into digital impact</span>
+                    <span class="card-label-sub">Xfocus Manifesto</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom Proof Benchmarks -->
+              <div class="proof-benchmarks">
+                <span class="benchmark-item">
+                  <span class="benchmark-dot emerald"></span>
+                  Zero Templates
+                </span>
+                <span class="benchmark-item">
+                  <span class="benchmark-dot cyan"></span>
+                  Sub-Second Speed
+                </span>
+                <span class="benchmark-item">
+                  <span class="benchmark-dot purple"></span>
+                  3D Spatial Engine
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Scroll Indicator Hint -->
+          <div class="scroll-prompt" id="scroll-prompt">
+            <div class="scroll-prompt-content">
+              <span class="scroll-line"></span>
+              <span class="scroll-text">Scroll to explore in 3D screw float pattern</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STAGE 1: FULL-STACK ARCHITECTURE (24% - 48% scroll) -->
+      <!-- Aligned with character sitting at high-frequency analytics terminal -->
+      <section class="screw-stage-card stage-architecture" id="stage-1" data-stage="1">
+        <div class="stage-container stage-layout-left">
+          <div class="stage-glass-panel stage-panel-wide">
+            <div class="stage-header-badge">
+              <span class="pulse-ring cyan"></span>
+              <span class="badge-code"> FULL-STACK ARCHITECTURE</span>
+            </div>
+
+            <h2 class="stage-headline">
+              Built For Ideas.<br>
+              <span class="text-gradient-cyan">Engineered For Impact.</span>
+            </h2>
+
+            <p class="stage-description">
+              From intuitive interfaces to robust backend systems,<br>
+              I combine modern technologies with creative thinking<br>
+              to turn ideas into complete digital experiences.
+            </p>
+
+            <!-- 3-Column Tech Matrix: FRONTEND | BACKEND | DATABASE -->
+            <div class="stack-columns-matrix">
+              <!-- Frontend Column -->
+              <div class="stack-column">
+                <span class="stack-col-title">FRONTEND</span>
+                <div class="stack-col-list">
+                  <div class="stack-item">HTML · CSS</div>
+                  <div class="stack-item">JavaScript</div>
+                  <div class="stack-item">React · Next.js</div>
+                </div>
+              </div>
+
+              <!-- Backend Column -->
+              <div class="stack-column">
+                <span class="stack-col-title">BACKEND</span>
+                <div class="stack-col-list">
+                  <div class="stack-item">Python · Node</div>
+                  <div class="stack-item">APIs · Auth</div>
+                </div>
+              </div>
+
+              <!-- Database Column -->
+              <div class="stack-column">
+                <span class="stack-col-title">DATABASE</span>
+                <div class="stack-col-list">
+                  <div class="stack-item">SQL · MongoDB</div>
+                  <div class="stack-item">Firebase</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Categories Banner -->
+            <div class="stack-domains-strip">
+              <span class="domain-item">WEB</span>
+              <span class="domain-dot">·</span>
+              <span class="domain-item">MOBILE</span>
+              <span class="domain-dot">·</span>
+              <span class="domain-item">AI</span>
+              <span class="domain-dot">·</span>
+              <span class="domain-item">3D</span>
+              <span class="domain-dot">·</span>
+
+            </div>
+
+            <!-- Interactive Action -->
+            <div class="stage-actions">
+              <button class="btn-primary-metallic btn-work-trigger" id="trigger-work-modal" data-trigger="view-work"
+                aria-label="View My Work">
+                <span class="btn-shine"></span>
+                <span class="btn-label">[ VIEW MY WORK ↗ ]</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STAGE 2: CONTACT & CONNECT MONOLITH (50% - 74% scroll) -->
+      <section class="screw-stage-card stage-spatial" id="stage-2" data-stage="2">
+        <div class="stage-container stage-layout-right">
+          <!-- 3D Perspective Depth Wrapper -->
+          <div class="contact-depth-perspective-wrap">
+            <div class="contact-isometric-monolith">
+              <!-- Top Extrusion Face -->
+              <div class="monolith-face-top" aria-hidden="true">
+                <div class="face-top-grid"></div>
+              </div>
+
+              <!-- Right Extrusion Face -->
+              <div class="monolith-face-right" aria-hidden="true">
+                <div class="face-right-glow"></div>
+              </div>
+
+              <!-- Front Main Face -->
+              <div class="monolith-face-front">
+                <!-- Terminal HUD Brackets -->
+                <div class="corner-bracket top-left">┌</div>
+                <div class="corner-bracket top-right">┐</div>
+                <div class="corner-bracket bottom-left">└</div>
+                <div class="corner-bracket bottom-right">┘</div>
+
+                <!-- Brand Header -->
+                <div class="monolith-header">
+                  <div class="monolith-badge">
+                    <span class="status-dot"></span>
+                    <span class="badge-text">COMMUNICATION NODE</span>
+                  </div>
+                  <h2 class="monolith-brand-title">Xfocus</h2>
+                  <h3 class="monolith-sub-title">LET'S CONNECT</h3>
+                </div>
+
+                <!-- Contact Detail Items (All Clickable Links, No Action Buttons) -->
+                <div class="monolith-contact-list">
+                  <!-- Email -->
+                  <div class="monolith-item">
+                    <div class="monolith-item-label">
+                      <i data-lucide="mail" class="item-icon"></i>
+                      <span>EMAIL</span>
+                    </div>
+                    <a href="mailto:hello@xfocus.com" class="monolith-link email-link">
+                      xfocus000@gmail.com
+                    </a>
+                  </div>
+
+                  <!-- Phone -->
+                  <div class="monolith-item">
+                    <div class="monolith-item-label">
+                      <i data-lucide="phone" class="item-icon"></i>
+                      <span>PHONE</span>
+                    </div>
+                    <a href="tel:+2348143638873" class="monolith-link phone-link">
+                      +234 814 363 8873
+                    </a>
+                  </div>
+
+                  <!-- WhatsApp -->
+                  <div class="monolith-item">
+                    <div class="monolith-item-label">
+                      <i data-lucide="message-circle" class="item-icon"></i>
+                      <span>WHATSAPP</span>
+                    </div>
+                    <div class="monolith-multi-links">
+                      <a href="https://wa.me/2348143638873?text=Hello%20Xfocus%20%F0%9F%91%8B%0A%0AI%E2%80%99m%20interested%20in%20your%20services%20and%20I%E2%80%99d%20like%20to%20make%20an%20enquiry."
+                        target="_blank" rel="noopener noreferrer" class="monolith-link whatsapp-link">
+                        +234 814 363 8873
+                      </a>
+                    </div>
+                    <div class="monolith-multi-links">
+                      <a href="https://wa.me/2348143638873?text=Hello%20Xfocus%20%F0%9F%91%8B%0A%0AI%E2%80%99m%20interested%20in%20your%20services%20and%20I%E2%80%99d%20like%20to%20make%20an%20enquiry."
+                        target="_blank" rel="noopener noreferrer" class="monolith-link whatsapp-link">
+                        +234 09157362289
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Location -->
+                  <div class="monolith-item">
+                    <div class="monolith-item-label">
+                      <i data-lucide="map-pin" class="item-icon"></i>
+                      <span>LOCATION</span>
+                    </div>
+                    <a href="https://maps.google.com/?q=Lagos,+Nigeria" target="_blank" rel="noopener noreferrer"
+                      class="monolith-link location-link">
+                      Abuja, Nigeria
+                    </a>
+                  </div>
+
+                  <!-- Socials -->
+                  <div class="monolith-item socials-item">
+                    <div class="monolith-item-label">
+                      <i data-lucide="share-2" class="item-icon"></i>
+                      <span>SOCIALS</span>
+                    </div>
+                    <div class="monolith-socials-grid">
+                      <a href="https://www.linkedin.com/in/john-simeon-1616b1423?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                        target="_blank" rel="noopener noreferrer" class="social-chip" title="LinkedIn">
+                        <i data-lucide="linkedin" class="social-icon"></i>
+                        <span>LinkedIn</span>
+                      </a>
+                      <a href="https://www.instagram.com/xfocus000?stkn=MTNxazJzbWl2dTZjZw==" target="_blank"
+                        rel="noopener noreferrer" class="social-chip" title="Instagram">
+                        <i data-lucide="instagram" class="social-icon"></i>
+                        <span>Instagram</span>
+                      </a>
+                      <a href="https://x.com/Focus3991" target="_blank" rel="noopener noreferrer" class="social-chip"
+                        title="X (Twitter)">
+                        <i data-lucide="twitter" class="social-icon"></i>
+                        <span>X</span>
+                      </a>
+                      <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-chip"
+                        title="TikTok">
+                        <i data-lucide="video" class="social-icon"></i>
+                        <span>TikTok</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STAGE 3: ABOUT US (76% - 100% scroll) -->
+      <!-- Aligned with character walking forward between servers into camera foreground -->
+      <section class="screw-stage-card stage-finale" id="stage-3" data-stage="3">
+        <div class="stage-container stage-layout-center">
+          <!-- Clickable Stage About Card (No buttons, card clicks to open full story) -->
+          <div class="stage-glass-panel stage-panel-wide about-card-interactive" id="stage-about-card" role="button"
+            tabindex="0" aria-label="Read full About Xfocus story" data-trigger="view-about">
+            <div class="corner-bracket top-left">┌</div>
+            <div class="corner-bracket top-right">┐</div>
+            <div class="corner-bracket bottom-left">└</div>
+            <div class="corner-bracket bottom-right">┘</div>
+
+            <div class="stage-header-badge center">
+              <span class="pulse-ring emerald"></span>
+              <span class="badge-code"> ABOUT US</span>
+            </div>
+
+            <h2 class="stage-headline text-center">
+              ABOUT <span class="text-gradient-emerald">XFOCUS</span>
+            </h2>
+
+            <h3 class="about-card-tagline text-center">
+              Built around ideas. Driven by technology. Defined by the experience.
+            </h3>
+
+            <p class="stage-description text-center max-w-600">
+              Xfocus is a digital development brand focused on turning ideas into thoughtful, functional, and engaging
+              digital experiences. At its core, Xfocus exists in the space between <strong>what someone imagines and
+                what people can actually experience.</strong>
+            </p>
+
+            <div class="about-card-expand-hint">
+              <span class="pulse-dot-emerald"></span>
+              <span class="expand-hint-text">CLICK TO READ FULL STORY</span>
+              <i data-lucide="arrow-up-right" class="expand-hint-icon"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Helical 3D Screw Stage Nav Indicator (Right edge) -->
+    <aside class="screw-helical-nav" id="screw-helical-nav" aria-label="Narrative Orbit Tracker">
+      <div class="helical-track">
+        <div class="helical-progress-bar" id="helical-progress-bar"></div>
+        <button class="helical-dot active" data-stage="0" aria-label="Go to Chapter 0: Vision">
+          <span class="dot-ring"></span>
+          <span class="dot-label">00 // Vision</span>
+        </button>
+        <button class="helical-dot" data-stage="1" aria-label="Go to Chapter 1: Architecture">
+          <span class="dot-ring"></span>
+          <span class="dot-label">01 // Architecture</span>
+        </button>
+        <button class="helical-dot" data-stage="2" aria-label="Go to Chapter 2: Contact">
+          <span class="dot-ring"></span>
+          <span class="dot-label">02 // Contact</span>
+        </button>
+        <button class="helical-dot" data-stage="3" aria-label="Go to Chapter 3: About">
+          <span class="dot-ring"></span>
+          <span class="dot-label">03 // About</span>
+        </button>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Scroll Depth Container for 3D Cinematic Frame Scrub -->
+  <div class="scroll-container" id="scroll-container" aria-hidden="true"></div>
+
+  <!-- SITE FOOTER: Layout precisely matching reference with authentic Xfocus website content -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-ambient-glow" aria-hidden="true"></div>
+
+    <div class="footer-content-wrap">
+      <!-- Row 1: 3 Columns of Navigation Links -->
+      <div class="footer-links-grid">
+
+        <!-- Column 1: Explore -->
+        <div class="footer-col">
+          <div class="footer-heading-wrap">
+            <h4 class="footer-heading">Explore</h4>
+            <span class="footer-heading-line"></span>
+          </div>
+          <ul class="footer-nav-list">
+            <li><button type="button" class="footer-nav-link" id="footer-link-home">Home</button></li>
+            <li><button type="button" class="footer-nav-link" id="footer-link-about" data-trigger="view-about">About
+                Xfocus</button></li>
+            <li><button type="button" class="footer-nav-link" id="footer-link-cases" data-trigger="view-work">Selected
+                Work</button></li>
+            <li><button type="button" class="footer-nav-link" id="footer-link-contact">Connect</button></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Capabilities -->
+        <div class="footer-col">
+          <div class="footer-heading-wrap">
+            <h4 class="footer-heading">Capabilities</h4>
+            <span class="footer-heading-line"></span>
+          </div>
+          <ul class="footer-nav-list">
+            <li><span class="footer-static-item">Interactive 3D Web</span></li>
+            <li><span class="footer-static-item">Full-Stack Architecture</span></li>
+            <li><span class="footer-static-item">Brand Identity Systems</span></li>
+            <li><span class="footer-static-item">Spatial Experience Design</span></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Direct Engagement -->
+        <div class="footer-col">
+          <div class="footer-heading-wrap">
+            <h4 class="footer-heading">Direct</h4>
+            <span class="footer-heading-line"></span>
+          </div>
+          <ul class="footer-nav-list">
+            <li><button type="button" class="footer-nav-link" data-trigger="get-website">Start a Project</button></li>
+            <li><a
+                href="https://wa.me/2348143638873?text=Hello%20Xfocus%20%F0%9F%91%8B%0A%0AI%E2%80%99m%20interested%20in%20your%20services%20and%20I%E2%80%99d%20like%20to%20make%20an%20enquiry."
+                target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp Direct ↗</a></li>
+            <li><button type="button" class="footer-nav-link" data-trigger="view-vision">Vision Manifesto</button></li>
+            <li><button type="button" class="footer-nav-link" data-trigger="view-mission">Mission Statement</button>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Row 2: Socials under Col 1 & Location under Col 2 (Matching reference layout) -->
+      <div class="footer-middle-grid">
+
+        <!-- Social Media Cluster (Aligned under Column 1) -->
+        <div class="footer-middle-socials">
+          <div class="footer-social-cluster">
+            <a href="https://wa.me/2348143638873?text=Hello%20Xfocus%20%F0%9F%91%8B" target="_blank"
+              rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp Xfocus" title="WhatsApp">
+              <i data-lucide="message-circle"></i>
+            </a>
+            <a href="https://instagram.com/xfocus000?stkn=MTNxazJzbWl2dTZjZw==" target="_blank"
+              rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram Xfocus" title="Instagram">
+              <i data-lucide="instagram"></i>
+            </a>
+            <a href="https://x.com/Focus3991" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+              aria-label="X (Twitter) Xfocus" title="X (Twitter)">
+              <i data-lucide="twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/john-simeon-1616b1423" target="_blank" rel="noopener noreferrer"
+              class="footer-social-btn" aria-label="LinkedIn Xfocus" title="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Location Block (Aligned under Column 2) -->
+        <div class="footer-middle-location">
+          <div class="footer-location-block">
+            <div class="footer-loc-header">
+              <i data-lucide="map-pin" class="footer-loc-icon cyan-accent"></i>
+              <span class="footer-loc-title">Our Location</span>
+            </div>
+            <div class="footer-contact-items">
+              <a href="https://maps.google.com/?q=Abuja,+Nigeria" target="_blank" rel="noopener noreferrer"
+                class="footer-contact-row contact-clickable">
+                <i data-lucide="map-pin" class="contact-row-icon"></i>
+                <span>Abuja, Nigeria</span>
+              </a>
+              <a href="tel:+2348143638873" class="footer-contact-row contact-clickable">
+                <i data-lucide="phone" class="contact-row-icon"></i>
+                <span>+234 814 363 8873</span>
+              </a>
+              <a href="mailto:xfocus000@gmail.com" class="footer-contact-row contact-clickable">
+                <i data-lucide="mail" class="contact-row-icon"></i>
+                <span>xfocus000@gmail.com</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Empty slot maintaining exact 3-column rhythm -->
+        <div class="footer-middle-empty" aria-hidden="true"></div>
+
+      </div>
+
+      <!-- Luminous Cyan Horizon Divider Rule -->
+      <div class="footer-divider-rule"></div>
+
+      <!-- Bottom Sub-Footer Bar (Logo on left, Stacked legal links in center, Copyright on right) -->
+      <div class="footer-bottom-bar">
+        <!-- Brand Signature -->
+        <div class="footer-brand-signature" id="footer-brand-signature" role="button" tabindex="0"
+          aria-label="Scroll to top">
+          <div class="brand-logo-wrap">
+            <img src="brand-icon.png" alt="X*FOCUS 3D Emblem" class="brand-logo-img">
+          </div>
+          <span class="brand-name">
+            <span class="brand-name-x">X</span><span class="brand-name-star">*</span><span
+              class="brand-name-focus">FOCUS</span>
+          </span>
+        </div>
+
+        <!-- Stacked Legal Links -->
+        <div class="footer-legal-links-stacked">
+          <div class="legal-row-top">
+            <span class="legal-link">End User License Agreement</span>
+            <span class="legal-link">Privacy Policy</span>
+          </div>
+          <div class="legal-row-bottom">
+            <span class="legal-link">Terms &amp; Conditions</span>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          <span>Coded and designed by Xfocus. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL 1: Project Consultation Modal ("Get a website") -->
+  <div class="modal-backdrop" id="project-modal" hidden>
+    <div class="modal-container modal-scrollable" role="dialog" aria-labelledby="project-modal-title" aria-modal="true">
+      <button class="modal-close-btn" id="close-project-modal" aria-label="Close dialog">
+        <i data-lucide="x"></i>
+      </button>
+
+      <!-- Step Flow View -->
+      <div id="project-form-view">
+        <div class="modal-header">
+          <div class="status-pill modal-badge">
+            <i data-lucide="sparkles" class="badge-icon"></i>
+            <span>Project Estimation</span>
+          </div>
+          <h3 class="modal-title" id="project-modal-title">Launch Your Conversion Engine</h3>
+          <p class="modal-desc">Configure your project specifications to receive a guaranteed fixed-scope proposal
+            within 24 hours.</p>
+        </div>
+
+        <!-- Step 1: Project Scope -->
+        <div id="project-step-1" class="step-pane active">
+          <div class="form-group">
+            <label class="form-label">Project Archetype</label>
+            <div class="pill-select-grid" id="project-type-options">
+              <button type="button" class="select-option selected" data-value="High-Converting SaaS">High-Converting
+                SaaS</button>
+              <button type="button" class="select-option" data-value="Enterprise Brand Platform">Enterprise Brand
+                Platform</button>
+              <button type="button" class="select-option" data-value="AI / Web3 Launch">AI / Web3 Launch</button>
+              <button type="button" class="select-option" data-value="Conversion Redesign">Conversion Redesign</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Investment Target</label>
+            <div class="pill-select-grid" id="budget-options">
+              <button type="button" class="select-option" data-value="$10,000 - $15,000">$10,000 - $15,000</button>
+              <button type="button" class="select-option selected" data-value="$15,000 - $30,000">$15,000 -
+                $30,000</button>
+              <button type="button" class="select-option" data-value="$30,000 - $50,000+">$30,000 - $50,000+</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Deployment Timeline</label>
+            <div class="pill-select-grid" id="timeline-options">
+              <button type="button" class="select-option" data-value="2-3 Weeks (Rapid Sprint)">2-3 Weeks (Rapid
+                Sprint)</button>
+              <button type="button" class="select-option selected" data-value="3-4 Weeks (Standard)">3-4 Weeks
+                (Standard)</button>
+              <button type="button" class="select-option" data-value="6+ Weeks (Full Ecosystem)">6+ Weeks (Full
+                Ecosystem)</button>
+            </div>
+          </div>
+
+          <button type="button" class="modal-btn-submit" id="btn-goto-step-2">
+            Continue to Specifications <i data-lucide="arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- Step 2: Contact Info -->
+        <div id="project-step-2" class="step-pane" hidden>
+          <form id="project-contact-form">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Full Name *</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="Alexander Vance" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Corporate Email *</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="alex@venture.io" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-company">Company / Product *</label>
+              <input type="text" id="contact-company" class="form-input" placeholder="Hyperion Dynamics" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-details">Primary Conversion Goal</label>
+              <textarea id="contact-details" class="form-textarea" rows="3"
+                placeholder="Briefly describe what needs to be built and current conversion bottlenecks..."></textarea>
+            </div>
+
+            <div class="form-buttons-row">
+              <button type="button" class="modal-btn-back" id="btn-backto-step-1">Back</button>
+              <button type="submit" class="modal-btn-submit">
+                Submit Project Brief <i data-lucide="check"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Confirmation Screen -->
+      <div id="project-success-view" hidden>
+        <div class="success-box">
+          <div class="success-icon-wrap">
+            <i data-lucide="check-circle-2"></i>
+          </div>
+          <h3 class="modal-title">Brief Received Successfully</h3>
+          <p class="modal-desc">
+            Your project blueprint has been transmitted to our Principal Design Architect. We will review your
+            conversion requirements and deliver a fixed-scope roadmap within 24 hours.
+          </p>
+          <div class="success-summary" id="project-summary-box">
+            <!-- Populated dynamically via JS -->
+          </div>
+          <button type="button" class="modal-btn-submit" id="btn-close-success">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Vision Manifesto Modal ("To shape what comes next.") -->
+  <div class="modal-backdrop" id="vision-modal" hidden>
+    <div class="modal-container modal-medium modal-scrollable vision-modal-container" role="dialog"
+      aria-labelledby="vision-modal-title" aria-modal="true">
+      <button class="modal-close-btn" id="close-vision-modal" aria-label="Close dialog">
+        <i data-lucide="x"></i>
+      </button>
+
+      <!-- Vision Header -->
+      <div class="modal-header vision-modal-header">
+        <div class="status-pill modal-badge vision-pill">
+          <span class="status-dot"></span>
+          <span>The Intent</span>
+        </div>
+        <h2 class="vision-manifesto-title" id="vision-modal-title">To shape what comes next.</h2>
+      </div>
+
+      <!-- Vision Content -->
+      <div class="vision-manifesto-content">
+        <div class="vision-lead-banner">
+          <p class="vision-lead-quote">
+            The future does not simply happen.<br><br>
+            It is imagined.<br>
+            It is designed.<br>
+            It is built by people willing to look beyond what already exists and ask,
+            <span class="vision-quote-highlight">&ldquo;What could this become?&rdquo;</span>
+          </p>
+        </div>
+
+        <p class="vision-paragraph vision-emphasis">
+          That is where I want my work to live.
+        </p>
+
+        <p class="vision-paragraph">
+          <strong>To shape what comes next</strong> is more than a statement. It is a way of thinking. A commitment to
+          creating digital experiences, identities, and products that do not simply follow what is already being done,
+          but explore what could be done differently.
+        </p>
+
+        <div class="vision-pillar-box">
+          <h4 class="vision-subheading">I believe great design should have a purpose beyond looking good:</h4>
+          <ul class="vision-pillars-list">
+            <li>
+              <div class="vision-bullet-icon"><i data-lucide="sparkles"></i></div>
+              <span>It should communicate an idea before a word is spoken.</span>
+            </li>
+            <li>
+              <div class="vision-bullet-icon"><i data-lucide="heart"></i></div>
+              <span>It should make technology feel human.</span>
+            </li>
+            <li>
+              <div class="vision-bullet-icon"><i data-lucide="cpu"></i></div>
+              <span>It should turn complexity into something people can understand.</span>
+            </li>
+            <li>
+              <div class="vision-bullet-icon"><i data-lucide="eye"></i></div>
+              <span>It should create experiences people remember.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="vision-question-banner">
+          <span class="vision-micro-tag">Foundational Principle</span>
+          <h3 class="vision-question-heading">Every project begins with a question: <em>What can this become?</em></h3>
+        </div>
+
+        <p class="vision-paragraph">
+          From a blank screen to a complete digital experience, I approach each project as an opportunity to create
+          something intentional. Something with character. Something that feels considered rather than manufactured.
+        </p>
+
+        <div class="vision-highlight-quote">
+          <p>The goal is not to design for the sake of design.</p>
+          <p class="vision-quote-accent">The goal is to solve, communicate, connect, and create.</p>
+        </div>
+
+        <p class="vision-paragraph">
+          I am interested in the space where <strong>design, technology, and imagination</strong> meet—where a visual
+          identity can become a story, where a website can become an experience, and where an idea can become something
+          people can actually interact with.
+        </p>
+
+        <p class="vision-paragraph">
+          Because the next generation of digital experiences should not feel like copies of the last.
+        </p>
+
+        <div class="vision-card-accent">
+          <h3 class="vision-accent-word">They should feel <span>new.</span></h3>
+          <p class="vision-sub-bullets">
+            Not necessarily louder.<br>
+            Not necessarily more complicated.<br>
+            Just more thoughtful. More human. More meaningful.
+          </p>
+        </div>
+
+        <p class="vision-paragraph">
+          My portfolio is therefore not simply a collection of finished projects. It is a record of ideas explored,
+          problems solved, systems built, and possibilities turned into something tangible.
+        </p>
+
+        <p class="vision-paragraph">
+          Some projects may begin with a simple concept. Others may begin with a problem that has no obvious answer. But
+          the process remains the same:
+        </p>
+
+        <!-- Process Grid -->
+        <div class="vision-process-grid">
+          <div class="vision-process-item">
+            <span class="step-num">01</span>
+            <div class="step-text">Question what exists.</div>
+          </div>
+          <div class="vision-process-item">
+            <span class="step-num">02</span>
+            <div class="step-text">Imagine what could exist.</div>
+          </div>
+          <div class="vision-process-item">
+            <span class="step-num">03</span>
+            <div class="step-text">Design with intention.</div>
+          </div>
+          <div class="vision-process-item">
+            <span class="step-num">04</span>
+            <div class="step-text">Build with purpose.</div>
+          </div>
+          <div class="vision-process-item full-width">
+            <span class="step-num">05</span>
+            <div class="step-text">And keep moving forward.</div>
+          </div>
+        </div>
+
+        <p class="vision-paragraph">
+          Because the work we create today becomes part of the world people experience tomorrow.
+        </p>
+
+        <p class="vision-paragraph">
+          And if we have the ability to influence that world, even in a small way, then we should do more than simply
+          fit into it.
+        </p>
+
+        <div class="vision-conclusion-banner">
+          <p class="vision-hero-statement">We should help shape it.</p>
+          <p class="vision-closing-sub">That is the kind of work I want to create.<br>That is the direction I am moving
+            toward.</p>
+          <div class="vision-signature-line">
+            <span>To shape what comes next.</span>
+          </div>
+        </div>
+
+        <!-- Action Buttons inside Manifesto -->
+        <div class="vision-actions-row">
+          <button type="button" class="modal-btn-submit vision-btn-cta" data-trigger="get-website">
+            <span>Start a Project</span>
+            <i data-lucide="arrow-right"></i>
+          </button>
+          <button type="button" class="btn-secondary-dark" data-trigger="view-cases">
+            View Case Studies
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Mission Manifesto Modal ("Transforming ideas into digital impact.") -->
+  <div class="modal-backdrop" id="mission-modal" hidden>
+    <div class="modal-container modal-medium modal-scrollable mission-modal-container" role="dialog"
+      aria-labelledby="mission-modal-title" aria-modal="true">
+      <button class="modal-close-btn" id="close-mission-modal" aria-label="Close dialog">
+        <i data-lucide="x"></i>
+      </button>
+
+      <!-- Mission Header -->
+      <div class="modal-header mission-modal-header">
+        <div class="status-pill modal-badge mission-pill">
+          <span class="status-dot"></span>
+          <span>The Mission</span>
+        </div>
+        <h2 class="mission-manifesto-title" id="mission-modal-title">Transforming ideas into digital impact.</h2>
+      </div>
+
+      <!-- Mission Content -->
+      <div class="mission-manifesto-content">
+
+        <!-- 1. The Genesis / Spark Banner -->
+        <div class="mission-lead-banner">
+          <p class="mission-lead-intro">Every meaningful creation begins as an idea.</p>
+          <div class="mission-spark-chain">
+            <div class="mission-spark-item">
+              <span class="spark-dot"></span>
+              <span class="spark-text">A thought.</span>
+            </div>
+            <div class="mission-spark-item">
+              <span class="spark-dot"></span>
+              <span class="spark-text">A problem.</span>
+            </div>
+            <div class="mission-spark-item">
+              <span class="spark-dot"></span>
+              <span class="spark-text">A possibility.</span>
+            </div>
+            <div class="mission-spark-item highlight">
+              <span class="spark-dot pulse"></span>
+              <span class="spark-text">Sometimes, just a feeling that something could be better.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Core Mission Callout -->
+        <div class="mission-statement-card">
+          <p class="mission-statement-text">
+            My mission is to take those ideas and give them <strong>direction, identity, and purpose</strong>—to
+            transform what exists in the mind into digital experiences that can be <em>seen, understood, felt, and
+              remembered.</em>
+          </p>
+        </div>
+
+        <!-- 3. Understanding Beyond Aesthetics -->
+        <p class="mission-paragraph mission-emphasis">
+          <strong>Transforming ideas into digital impact</strong> means going beyond simply creating something that
+          looks good.
+        </p>
+
+        <p class="mission-paragraph">
+          It means understanding the idea behind the work.
+        </p>
+
+        <div class="mission-understanding-grid">
+          <div class="understanding-card">
+            <div class="understanding-icon-wrap"><i data-lucide="users"></i></div>
+            <div class="understanding-body">
+              <span class="understanding-tag">Audience &amp; Empathy</span>
+              <h4 class="understanding-text">Understanding the people it is meant for.</h4>
+            </div>
+          </div>
+          <div class="understanding-card">
+            <div class="understanding-icon-wrap"><i data-lucide="crosshair"></i></div>
+            <div class="understanding-body">
+              <span class="understanding-tag">Problem Architecture</span>
+              <h4 class="understanding-text">Understanding the problem it needs to solve.</h4>
+            </div>
+          </div>
+          <div class="understanding-card">
+            <div class="understanding-icon-wrap"><i data-lucide="message-square"></i></div>
+            <div class="understanding-body">
+              <span class="understanding-tag">Clarity &amp; Resonance</span>
+              <h4 class="understanding-text">Understanding the message it needs to communicate.</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="mission-synthesis-banner">
+          <i data-lucide="layers" class="synthesis-icon"></i>
+          <p class="synthesis-text">
+            Then bringing all of those pieces together through <strong>thoughtful design</strong> and <strong>purposeful
+              technology</strong>.
+          </p>
+        </div>
+
+        <!-- 4. Reason to Exist -->
+        <div class="mission-reason-card">
+          <h3 class="reason-heading">I believe digital work should have a reason to exist.</h3>
+
+          <div class="reason-triad-grid">
+            <div class="reason-triad-item">
+              <span class="reason-prefix">A website should do more than</span>
+              <span class="reason-highlight">occupy a screen.</span>
+            </div>
+            <div class="reason-triad-item">
+              <span class="reason-prefix">A brand should do more than</span>
+              <span class="reason-highlight">carry a logo.</span>
+            </div>
+            <div class="reason-triad-item">
+              <span class="reason-prefix">An application should do more than</span>
+              <span class="reason-highlight">perform a function.</span>
+            </div>
+          </div>
+
+          <div class="reason-climax-box">
+            <span class="reason-climax-tag">The Imperative</span>
+            <p class="reason-climax-statement">They should create connections.</p>
+          </div>
+        </div>
+
+        <div class="mission-connections-banner">
+          <p>
+            They should make <span class="conn-pill">information easier to understand</span>, <span
+              class="conn-pill">experiences easier to navigate</span>, and <span class="conn-pill">ideas easier to
+              believe in</span>.
+          </p>
+        </div>
+
+        <p class="mission-paragraph">
+          That is why every project is approached as more than a visual exercise. It is a process of <strong>discovery,
+            thinking, designing, building, refining</strong>, and creating something that serves a real purpose.
+        </p>
+
+        <!-- 5. The Bridge: Idea to Experience -->
+        <div class="mission-bridge-section">
+          <div class="mission-bridge-header">
+            <span class="mission-micro-tag">The Core Nexus</span>
+            <h3 class="mission-bridge-heading">I aim to bridge the gap between <em>an idea and its experience.</em></h3>
+          </div>
+
+          <div class="bridge-pairs-container">
+            <div class="bridge-pair-card">
+              <div class="bridge-connector-icon"><i data-lucide="arrow-right-left"></i></div>
+              <p>Between what someone imagines and what people can actually interact with.</p>
+            </div>
+            <div class="bridge-pair-card">
+              <div class="bridge-connector-icon"><i data-lucide="cpu"></i></div>
+              <p>Between technology and the human beings using it.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mission-humanity-quote">
+          <p>
+            The result should not feel complicated simply because technology is involved. It should feel intentional.
+            Natural. Clear. Human.
+          </p>
+        </div>
+
+        <!-- 6. Better, Not Bigger -->
+        <div class="mission-better-box">
+          <p class="better-intro">Because impact does not always come from making something bigger.</p>
+          <h3 class="better-accent">Sometimes it comes from making something <span>better.</span></h3>
+
+          <div class="better-triad-row">
+            <div class="better-pill">
+              <i data-lucide="check" class="better-check"></i>
+              <span>Better understood.</span>
+            </div>
+            <div class="better-pill">
+              <i data-lucide="check" class="better-check"></i>
+              <span>Better experienced.</span>
+            </div>
+            <div class="better-pill">
+              <i data-lucide="check" class="better-check"></i>
+              <span>Better remembered.</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="mission-paragraph">
+          Whether I am developing a digital identity, designing an interface, building a website, or exploring a new
+          digital experience, my goal remains the same:
+        </p>
+
+        <!-- 7. Turn... Turn... Turn... Goal Sequence -->
+        <div class="mission-goal-sequence">
+          <div class="goal-step">
+            <div class="goal-step-badge">01</div>
+            <div class="goal-step-content">Turn ideas into experiences.</div>
+          </div>
+          <div class="goal-connector">
+            <i data-lucide="chevron-down"></i>
+          </div>
+          <div class="goal-step">
+            <div class="goal-step-badge">02</div>
+            <div class="goal-step-content">Turn experiences into connections.</div>
+          </div>
+          <div class="goal-connector">
+            <i data-lucide="chevron-down"></i>
+          </div>
+          <div class="goal-step goal-step-final">
+            <div class="goal-step-badge">03</div>
+            <div class="goal-step-content">Turn connections into impact.</div>
+          </div>
+        </div>
+
+        <!-- 8. Standout in the Noise -->
+        <div class="mission-noise-section">
+          <h3 class="noise-main-title">I want to create work that does not disappear into the noise of the digital
+            world.</h3>
+
+          <div class="noise-qualities-grid">
+            <div class="noise-quality-card">
+              <div class="noise-icon-wrap"><i data-lucide="fingerprint"></i></div>
+              <span>Work with character.</span>
+            </div>
+            <div class="noise-quality-card">
+              <div class="noise-icon-wrap"><i data-lucide="compass"></i></div>
+              <span>Work with purpose.</span>
+            </div>
+            <div class="noise-quality-card">
+              <div class="noise-icon-wrap"><i data-lucide="zap"></i></div>
+              <span>Work that communicates before it explains.</span>
+            </div>
+            <div class="noise-quality-card noise-quality-wide">
+              <div class="noise-icon-wrap"><i data-lucide="sparkles"></i></div>
+              <span>Work that makes people stop, look, interact, and remember.</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="mission-paragraph mission-emphasis">
+          Because an idea only becomes powerful when it moves beyond the person who imagined it.
+        </p>
+
+        <p class="mission-paragraph">
+          That is where my mission begins.
+        </p>
+
+        <!-- 9. Final Climax & Manifesto Banner -->
+        <div class="mission-conclusion-banner">
+          <div class="mission-climax-mantra">
+            To take ideas from thought to form, from form to experience, and from experience to impact.
+          </div>
+
+          <div class="mission-contrast-lines">
+            <p class="contrast-today">Not simply to create what is possible today—</p>
+            <p class="contrast-tomorrow">but to create what can make tomorrow better.</p>
+          </div>
+
+          <div class="mission-signature-line">
+            <span>Transforming ideas into digital impact.</span>
+          </div>
+        </div>
+
+        <!-- Action CTA Buttons inside Mission Modal -->
+        <div class="vision-actions-row">
+          <button type="button" class="modal-btn-submit vision-btn-cta" data-trigger="get-website">
+            <span>Start a Project</span>
+            <i data-lucide="arrow-right"></i>
+          </button>
+          <button type="button" class="btn-secondary-dark" data-trigger="view-cases">
+            View Case Studies
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: Cases Modal ("View cases" & Stat Boxes) -->
+  <div class="modal-backdrop" id="cases-modal" hidden>
+    <div class="modal-container modal-large modal-scrollable" role="dialog" aria-labelledby="cases-modal-title"
+      aria-modal="true">
+      <button class="modal-close-btn" id="close-cases-modal" aria-label="Close dialog">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="modal-header">
+        <div class="status-pill modal-badge">
+          <i data-lucide="award" class="badge-icon"></i>
+          <span>Verified Case Studies</span>
+        </div>
+        <h3 class="modal-title" id="cases-modal-title">Design That Sells — Proof in Numbers</h3>
+        <p class="modal-desc">Explore audited performance metrics from our recent enterprise and high-growth clients.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="cases-filter-tabs" id="cases-tabs">
+        <button class="case-tab active" data-category="all">All Sectors</button>
+        <button class="case-tab" data-category="fintech">FinTech &amp; Web3</button>
+        <button class="case-tab" data-category="enterprise">Enterprise</button>
+        <button class="case-tab" data-category="defense">Cyber &amp; Defense</button>
+        <button class="case-tab" data-category="luxury">Luxury</button>
+      </div>
+
+      <!-- Cases Grid -->
+      <div class="cases-cards-grid" id="cases-grid">
+        <!-- Case 1 -->
+        <div class="case-item-card" data-category="fintech">
+          <div class="case-top">
+            <span class="case-badge">FinTech &amp; Web3 Infrastructure</span>
+            <span class="case-year">2025</span>
+          </div>
+          <h4 class="case-title">Aetheria Protocol</h4>
+          <div class="case-metric-row">
+            <span class="case-highlight">+240%</span>
+            <span class="case-metric-sub">conversion lift on institutional deposits</span>
+          </div>
+          <p class="case-desc">
+            Re-architected positioning and onboarding flow for high-net-worth liquidity providers. Replaced complex
+            technical jargon with high-fidelity 3D visualization and friction-free verification.
+          </p>
+          <div class="case-tags">
+            <span>Brand Positioning</span>
+            <span>3D Interactive</span>
+            <span>Design System</span>
+          </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="case-item-card" data-category="enterprise">
+          <div class="case-top">
+            <span class="case-badge">Enterprise Infrastructure</span>
+            <span class="case-year">2025</span>
+          </div>
+          <h4 class="case-title">Hyperion AI Compute</h4>
+          <div class="case-metric-row">
+            <span class="case-highlight">$1.85M</span>
+            <span class="case-metric-sub">in enterprise pipeline within 60 days</span>
+          </div>
+          <p class="case-desc">
+            Engineered a cinematic, futuristic enterprise sales portal with instant GPU cluster reservation calculator
+            and real-time latency benchmark graphics.
+          </p>
+          <div class="case-tags">
+            <span>Enterprise UX</span>
+            <span>Design Engineering</span>
+            <span>Conversion Architecture</span>
+          </div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="case-item-card" data-category="defense">
+          <div class="case-top">
+            <span class="case-badge">Defense &amp; Cyber-Security</span>
+            <span class="case-year">2024</span>
+          </div>
+          <h4 class="case-title">Novalis Biometrics</h4>
+          <div class="case-metric-row">
+            <span class="case-highlight">+180%</span>
+            <span class="case-metric-sub">qualified executive demo bookings</span>
+          </div>
+          <p class="case-desc">
+            Designed a high-security cyber defense intelligence showcase. Streamlined the conversion funnel from 7 steps
+            to 2, accelerating sales velocity.
+          </p>
+          <div class="case-tags">
+            <span>Conversion Strategy</span>
+            <span>Dark Aesthetic</span>
+            <span>Performance Speed</span>
+          </div>
+        </div>
+
+        <!-- Case 4 -->
+        <div class="case-item-card" data-category="luxury">
+          <div class="case-top">
+            <span class="case-badge">Luxury Automotive</span>
+            <span class="case-year">2024</span>
+          </div>
+          <h4 class="case-title">Veloce Hypercars</h4>
+          <div class="case-metric-row">
+            <span class="case-highlight">$2.4M+</span>
+            <span class="case-metric-sub">first-week allocation deposits secured</span>
+          </div>
+          <p class="case-desc">
+            Bespoke vehicle 3D configurator and ultra-luxury launch site that translated raw speed and titanium
+            engineering into immediate collector reservations.
+          </p>
+          <div class="case-tags">
+            <span>Ultra Luxury</span>
+            <span>Configurator</span>
+            <span>Motion Experience</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer-cta">
+        <p>Ready to reproduce these metric gains in your domain?</p>
+        <button type="button" class="btn-primary-metallic" id="cases-book-call-btn">
+          <span class="btn-shine"></span>
+          <span class="btn-label">Book Strategy Call</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Selected Work Showcase (Diagonal Circuit Flow) -->
+  <div class="modal-backdrop" id="work-modal" hidden>
+    <div class="modal-container modal-large modal-scrollable work-modal-container" role="dialog"
+      aria-labelledby="work-modal-title" aria-modal="true">
+      <button class="modal-close-btn" id="close-work-modal" aria-label="Close dialog">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="modal-header text-center">
+        <div class="status-pill modal-badge">
+          <span class="status-dot"></span>
+          <span>01 // SELECTED PRODUCTION ARCHITECTURE</span>
+        </div>
+        <h3 class="modal-title" id="work-modal-title">Engineering That Operates at Scale</h3>
+        <p class="modal-desc">Production platforms engineered for resilience, speed, and real-world commercial impact.
+        </p>
+      </div>
+
+      <!-- Schematic Zigzag Circuit Canvas -->
+      <div class="work-circuit-board" id="work-circuit-board">
+        <!-- SVG Connector Lines Overlay -->
+        <svg class="circuit-svg-overlay" viewBox="0 0 700 620" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="circuitGrad1" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.85" />
+              <stop offset="100%" stop-color="#818cf8" stop-opacity="0.85" />
+            </linearGradient>
+            <linearGradient id="circuitGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#818cf8" stop-opacity="0.85" />
+              <stop offset="100%" stop-color="#34d399" stop-opacity="0.85" />
+            </linearGradient>
+            <filter id="glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          <!-- Line 1: From Card 01 (right) to Card 02 (left) -->
+          <path class="circuit-flow-path path-1" d="M 440 170 L 260 270" stroke="url(#circuitGrad1)" stroke-width="2.5"
+            stroke-dasharray="6 6" fill="none" filter="url(#glow-filter)" />
+          <!-- Line 2: From Card 02 (left) to Card 03 (right) -->
+          <path class="circuit-flow-path path-2" d="M 260 390 L 440 480" stroke="url(#circuitGrad2)" stroke-width="2.5"
+            stroke-dasharray="6 6" fill="none" filter="url(#glow-filter)" />
+        </svg>
+
+        <!-- ROW 1: CARD 01 (Aligned Right) -->
+        <div class="circuit-row row-right">
+          <div class="circuit-card card-01" data-project="oxela">
+            <div class="corner-bracket top-left">┌</div>
+            <div class="corner-bracket top-right">┐</div>
+            <div class="corner-bracket bottom-left">└</div>
+            <div class="corner-bracket bottom-right">┘</div>
+
+            <div class="card-num-badge">01</div>
+            <h4 class="card-brand-title">O'XELA KITCHEN</h4>
+            <div class="card-category-tag">Food Ordering Platform</div>
+
+            <div class="card-actions-cluster">
+              <a href="https://oxela-kitchen.onrender.com/" target="_blank" rel="noopener noreferrer"
+                class="circuit-view-btn primary-view">
+                <span class="view-text">VIEW STORE</span>
+                <i data-lucide="arrow-right" class="view-icon"></i>
+              </a>
+              <a href="https://oxela-kitchen.onrender.com/master" target="_blank" rel="noopener noreferrer"
+                class="circuit-view-btn secondary-view" title="Kitchen & Order Management Console">
+                <span class="view-text">MASTER</span>
+                <i data-lucide="shield-check" class="view-icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONNECTOR INDICATOR 1: Diagonal slash ╱ -->
+        <div class="circuit-connector-indicator connector-left" aria-hidden="true">
+          <div class="ascii-slash-track">
+            <span class="ascii-char">╱</span>
+            <span class="ascii-char">╱</span>
+          </div>
+          <span class="connector-pulse-dot"></span>
+        </div>
+
+        <!-- ROW 2: CARD 02 (Aligned Left) -->
+        <div class="circuit-row row-left">
+          <div class="circuit-card card-02" data-project="lumina-faces">
+            <div class="corner-bracket top-left">┌</div>
+            <div class="corner-bracket top-right">┐</div>
+            <div class="corner-bracket bottom-left">└</div>
+            <div class="corner-bracket bottom-right">┘</div>
+
+            <div class="card-num-badge">02</div>
+            <h4 class="card-brand-title">LUMINA FACES</h4>
+            <div class="card-category-tag">Modeling Competition</div>
+
+            <div class="card-actions-cluster">
+              <a href="https://lumina-faces.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="circuit-view-btn primary-view">
+                <span class="view-text">VIEW</span>
+                <i data-lucide="arrow-right" class="view-icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONNECTOR INDICATOR 2: Diagonal backslash ╲ -->
+        <div class="circuit-connector-indicator connector-right" aria-hidden="true">
+          <div class="ascii-slash-track">
+            <span class="ascii-char">╲</span>
+            <span class="ascii-char">╲</span>
+          </div>
+          <span class="connector-pulse-dot"></span>
+        </div>
+
+        <!-- ROW 3: CARD 03 (Aligned Right) -->
+        <div class="circuit-row row-right">
+          <div class="circuit-card card-03" data-project="lumina-vote">
+            <div class="corner-bracket top-left">┌</div>
+            <div class="corner-bracket top-right">┐</div>
+            <div class="corner-bracket bottom-left">└</div>
+            <div class="corner-bracket bottom-right">┘</div>
+
+            <div class="card-num-badge">03</div>
+            <h4 class="card-brand-title">LUMINA FACE VOTE</h4>
+            <div class="card-category-tag">Online Voting Platform</div>
+
+            <div class="card-actions-cluster">
+              <a href="https://lumina-face-votes.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="circuit-view-btn primary-view">
+                <span class="view-text">VIEW</span>
+                <i data-lucide="arrow-right" class="view-icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer-cta">
+        <p>Looking for custom infrastructure engineered for your brand?</p>
+        <a href="https://wa.me/2348143638873?text=Hello%20Xfocus%20%F0%9F%91%8B%0A%0AI%E2%80%99m%20interested%20in%20your%20services%20and%20I%E2%80%99d%20like%20to%20make%20an%20enquiry."
+          target="_blank" rel="noopener noreferrer" class="btn-primary-metallic" id="work-modal-whatsapp-cta">
+          <span class="btn-shine"></span>
+          <span class="btn-label">Enquiry <i data-lucide="arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Full About Xfocus Manifesto & Story -->
+  <div class="modal-backdrop" id="about-modal" hidden>
+    <div class="modal-container modal-large modal-scrollable about-modal-container" role="dialog"
+      aria-labelledby="about-modal-title" aria-modal="true">
+      <button class="modal-close-btn" id="close-about-modal" aria-label="Close dialog">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="modal-header text-center">
+        <div class="status-pill modal-badge">
+          <span class="status-dot emerald"></span>
+          <span> PHILOSOPHY &amp; MANIFESTO</span>
+        </div>
+        <h2 class="modal-title about-modal-headline" id="about-modal-title">ABOUT XFOCUS</h2>
+        <p class="about-modal-lead">Built around ideas. Driven by technology. Defined by the experience.</p>
+      </div>
+
+      <div class="about-modal-body">
+        <div class="about-text-block">
+          <p class="about-highlight-p">
+            Xfocus is a digital development brand focused on turning ideas into thoughtful, functional, and engaging
+            digital experiences.
+          </p>
+          <p>
+            At its core, Xfocus exists in the space between <strong>what someone imagines and what people can actually
+              experience.</strong>
+          </p>
+          <p>
+            An idea can start as a sketch, a conversation, a business problem, or simply a thought that refuses to go
+            away. But an idea on its own is only a beginning. It needs structure, technology, creativity, and careful
+            execution before it can become something useful.
+          </p>
+          <p class="about-em-p">
+            That is where Xfocus comes in.
+          </p>
+          <p>
+            I approach every project as an opportunity to understand the idea first, then determine how technology can
+            give it form. Whether it is a website, web application, digital platform, or a completely new concept, the
+            focus is not simply on making something functional. It is about creating something that makes sense for the
+            people who will actually use it.
+          </p>
+        </div>
+
+        <div class="about-section-card">
+          <h3 class="about-section-heading"><i data-lucide="code" class="section-icon"></i> MORE THAN JUST CODE</h3>
+          <p>Development is only one part of building a successful digital product.</p>
+          <p>Behind every interface is a decision.</p>
+          <ul class="about-decision-list">
+            <li><span class="bullet-dot"></span> Why is this here?</li>
+            <li><span class="bullet-dot"></span> How should someone interact with it?</li>
+            <li><span class="bullet-dot"></span> What should happen next?</li>
+            <li><span class="bullet-dot"></span> What problem does this solve?</li>
+          </ul>
+          <p>These are the questions that influence how I work.</p>
+          <p>
+            I care about the details that users may never consciously notice—the flow between pages, the clarity of
+            information, the responsiveness of an interface, the way interactions feel, and how the different parts of a
+            product work together.
+          </p>
+          <p>
+            Because when those details are handled properly, technology becomes less noticeable and the experience
+            becomes more natural.
+          </p>
+        </div>
+
+        <div class="about-section-card">
+          <h3 class="about-section-heading"><i data-lucide="target" class="section-icon"></i> CREATING WITH PURPOSE</h3>
+          <p>Xfocus is not built around producing as many projects as possible.</p>
+          <p>It is built around creating work that has a reason behind it.</p>
+          <p>
+            Some projects require simplicity. Others demand something more experimental. Some need to communicate
+            immediately, while others need to guide users through a more complex experience.
+          </p>
+          <p>There is no single formula for all of them.</p>
+          <p class="about-italic-quote">The approach changes with the problem.</p>
+          <p>
+            What remains constant is the attention given to understanding the objective, choosing the right direction,
+            and building the final product with intention.
+          </p>
+        </div>
+
+        <div class="about-section-card">
+          <h3 class="about-section-heading"><i data-lucide="layers" class="section-icon"></i> WHERE DESIGN MEETS
+            DEVELOPMENT</h3>
+          <p>One of the things that defines Xfocus is the relationship between visual thinking and technical execution.
+          </p>
+          <p>A digital product should not have to choose between looking good and working well.</p>
+          <div class="about-principles-grid">
+            <div class="principle-item"><i data-lucide="check" class="check-icon"></i> The interface should communicate.
+            </div>
+            <div class="principle-item"><i data-lucide="check" class="check-icon"></i> The technology should support it.
+            </div>
+            <div class="principle-item"><i data-lucide="check" class="check-icon"></i> The interaction should feel
+              natural.</div>
+            <div class="principle-item"><i data-lucide="check" class="check-icon"></i> And the final experience should
+              feel like one complete product.</div>
+          </div>
+          <p>That balance is what I strive for in my work.</p>
+          <p>
+            I enjoy taking something that may initially exist only as an idea and gradually giving it structure—first as
+            a concept, then as a design, and eventually as something people can interact with.
+          </p>
+        </div>
+
+        <div class="about-section-card">
+          <h3 class="about-section-heading"><i data-lucide="sparkles" class="section-icon"></i> THE WORK</h3>
+          <p>The projects in this portfolio represent different problems, industries, and approaches.</p>
+          <p>
+            From digital food ordering systems to competition platforms and interactive experiences, each project has
+            its own requirements and challenges.
+          </p>
+          <p>They are not presented simply as finished screens.</p>
+          <p>
+            They represent the process of taking an idea, understanding what it needs, making decisions, solving
+            problems, and turning the result into a working digital experience.
+          </p>
+          <p class="about-manifesto-highlight">
+            That is what I want Xfocus to be known for. Not just for the things it creates, but for the thought that
+            goes into creating them.
+          </p>
+        </div>
+
+        <!-- Divider -->
+        <div class="about-manifesto-divider"></div>
+
+        <!-- Closing Callout: HAVE SOMETHING IN MIND? -->
+        <div class="about-cta-box">
+          <h2 class="about-cta-title">HAVE SOMETHING IN MIND?</h2>
+          <h3 class="about-cta-subtitle">Let's turn your idea into something real.</h3>
+          <p>You don't need to have everything figured out before reaching out.</p>
+          <p>
+            If you have a business idea, a product you want to build, a website you've been thinking about, or simply a
+            problem you believe technology could solve, <strong>start the conversation.</strong>
+          </p>
+          <p>Tell Xfocus what you're thinking, what you're trying to achieve, and where you want to go. We'll take it
+            from there.</p>
+
+          <div class="about-final-action">
+            <div class="ready-badge">READY TO BUILD?</div>
+            <a href="https://wa.me/2348143638873?text=Hello%20Xfocus%20%F0%9F%91%8B%0A%0AI%E2%80%99m%20interested%20in%20your%20services%20and%20I%E2%80%99d%20like%20to%20make%20an%20enquiry."
+              target="_blank" rel="noopener noreferrer" class="btn-primary-metallic btn-start-project">
+              <span class="btn-shine"></span>
+              <span class="btn-label">START A PROJECT <i data-lucide="arrow-right"></i></span>
+            </a>
+            <p class="about-cta-caption"><em>Tell us about your project and let's explore what we can create
+                together.</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- JavaScript Modules -->
+  <script src="script.js"></script>
+</body>
+
+</html>

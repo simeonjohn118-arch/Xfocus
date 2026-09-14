@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X*FOCUS — Websites | Apps | Digital Solutions</title>
+  <meta name="description"
+    content="X*FOCUS: High-velocity digital experiences, bespoke 3D spatial web design, apps, and engineering solutions built for maximum conversions.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Bebas+Neue&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 3D Cinematic Background Canvas -->
+  <canvas id="cinema-canvas"></canvas>
+  <div class="canvas-vignette" aria-hidden="true"></div>
+
+  <!-- Main Website Interface Layer -->
+  <div class="app-container">
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar-header" id="navbar">
+      <div class="nav-inner">
+        <!-- Top Left Corner: Static Brand Logo -->
+        <div class="nav-brand" id="nav-brand-logo" role="button" tabindex="0" aria-label="X*FOCUS Home">
+          <div class="brand-logo-wrap">
+            <img src="brand-icon.png" alt="X*FOCUS 3D Emblem" class="brand-logo-img">
+          </div>
+          <span class="brand-name">
+            <span class="brand-name-x">X</span><span class="brand-name-star">*</span><span
+              class="brand-name-focus">FOCUS</span>
+          </span>
+        </div>
+
+        <!-- Floating Pill Center Navigation -->
+        <nav class="nav-pill-menu" id="nav-pill-container" aria-label="Main Navigation">
+          <button class="nav-pill-btn" data-nav="about">About</button>
+          <button class="nav-pill-btn" data-nav="services">Services</button>
+          <button class="nav-pill-btn active" data-nav="home">Home</button>
+          <button class="nav-pill-btn" data-nav="cases">Cases</button>
+          <button class="nav-pill-btn" data-nav="pricing">Pricing</button>
+        </nav>
+
+
+    </header>
+
+    <!-- 3D Perspective Screw Float Stage Viewport -->
+    <div class="screw-stage-viewport" id="screw-stage-viewport">
+
+      <!-- STAGE 0: HERO (0% - 22% scroll) -->
+      <section class="screw-stage-card stage-hero active" id="stage-0" data-stage="0">
+        <div class="hero-content-wrapper">
+          <div class="hero-grid">
+
+            <!-- Left Column: Headline & Direct Actions -->
+            <div class="hero-left" id="hero-left-column">
+              <!-- Live Status Pill -->
+              <div class="status-pill">
+                <span class="status-dot"></span>
+                <span class="status-text">CREATIVE DESIGNER</span>
+              </div>
+
+              <!-- Main Title -->
+              <h1 class="hero-title" id="hero-main-heading">
+                <span class="title-line-1">I DESIGN.</span>
+                <span class="title-line-2">I BUILD.</span>
+                <span class="title-line-3">I CREATE WHAT'S NEXT</span>
+              </h1>
+
+              <!-- Subtitle -->
+              <p class="hero-subtitle" id="hero-subtitle">
+                No templates. Only strategy &amp; results.
+              </p>
+
+              <!-- CTA Buttons -->
+              <div class="hero-cta-group" id="hero-cta-group">
+                <button class="btn-primary-metallic" id="hero-cta-get-website" data-trigger="get-website">
+                  <span class="btn-shine"></span>
+                  <span class="btn-label">Get a website</span>
+                </button>
+                <button class="btn-secondary-dark" id="hero-cta-view-cases" data-trigger="view-cases">
+                  View cases
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Column: Narrative Proposition & 2 Stat Boxes -->
+            <div class="hero-right" id="hero-right-column">
+              <div class="hero-narrative">
+                <div class="badge-tag">
+                  <i data-lucide="sparkles" class="badge-icon"></i>
+                  <span>Proven Impact</span>
+                </div>
+                <h2 class="narrative-heading" id="hero-right-heading">
+                  Think. Build. Evolve.
+                </h2>
+                <p class="narrative-desc" id="hero-right-description">
+                  Every project starts with an idea. I turn that idea into a carefully designed, intelligently
+                  engineered digital experience—and continuously push it further.
+                </p>
+              </div>
+
+              <!-- Exactly 2 Smaller Square Boxes -->
+              <div class="stat-boxes-grid" id="hero-two-square-boxes">
+                <!-- Square Box 1: +180% conversion growth -->
+                <div class="stat-card" id="square-box-1" role="button" tabindex="0" title="View conversion case studies"
+                  data-trigger="view-cases">
+                  <div class="card-header">
+                    <span class="card-icon-wrap">
+                      <i data-lucide="trending-up"></i>
+                    </span>
+                    <i data-lucide="arrow-up-right" class="card-arrow"></i>
+                  </div>
+                  <div class="card-stat-val card-stat-blue">Vision</div>
+                  <div class="card-footer">
+                    <span class="card-label-title">To shape what comes next.</span>
+                    <span class="card-label-sub">X*FOCUS</span>
+                  </div>
+                </div>
+
+                <!-- Square Box 2: Mission -->
+                <div class="stat-card" id="square-box-2" role="button" tabindex="0"
+                  title="View revenue generation case studies" data-trigger="view-cases">
+                  <div class="card-header">
+                    <span class="card-icon-wrap">
+                      <i data-lucide="dollar-sign"></i>
+                    </span>
+                    <i data-lucide="arrow-up-right" class="card-arrow"></i>
+                  </div>
+                  <div class="card-stat-val card-stat-blue">Mission</div>
+                  <div class="card-footer">
+                    <span class="card-label-title">We shape what comes next by transforming ideas into innovative
+                      digital experiences and solutions that solve real problems and create meaningful impact.</span>
+                    <span class="card-label-sub">Client revenue</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom Proof Benchmarks -->
+              <div class="proof-benchmarks">
+                <span class="benchmark-item">
+                  <span class="benchmark-dot emerald"></span>
+                  Zero Templates
+                </span>
+                <span class="benchmark-item">
+                  <span class="benchmark-dot cyan"></span>
+                  Sub-Second Speed
+                </span>
+                <span class="benchmark-item">
+                  <span class="benchmark-dot purple"></span>
+                  3D Spatial Engine
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Scroll Indicator Hint -->
+          <div class="scroll-prompt" id="scroll-prompt">
+            <div class="scroll-prompt-content">
+              <span class="scroll-line"></span>
+              <span class="scroll-text">Scroll to explore in 3D screw float pattern</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STAGE 1: COMMAND ARCHITECTURE (24% - 48% scroll) -->
+      <!-- Aligned with character sitting at high-frequency analytics terminal -->
+      <section class="screw-stage-card stage-architecture" id="stage-1" data-stage="1">
+        <div class="stage-container stage-layout-left">
+          <div class="stage-glass-panel">
+            <div class="stage-header-badge">
+              <span class="pulse-ring cyan"></span>
+              <span class="badge-code">01 // COMMAND ARCHITECTURE</span>
+            </div>
+
+            <h2 class="stage-headline">
+              Engineered For Speed.<br>
+              <span class="text-gradient-cyan">Structured For Conversions.</span>
+            </h2>
+
+            <p class="stage-description">
+              Eliminating friction through mathematical interface design. While typical websites lose 68% of visitors
+              during page transition lag, our digital experiences operate at sub-100ms response rates with real-time
+              visual telemetry.
+            </p>
+
+            <div class="stage-metric-pill-row">
+              <div class="metric-pill">
+                <span class="metric-pill-val">0.08s</span>
+                <span class="metric-pill-label">Interactive TTFB</span>
+              </div>
+              <div class="metric-pill">
+                <span class="metric-pill-val">99.8%</span>
+                <span class="metric-pill-label">Pipeline Yield</span>
+              </div>
+              <div class="metric-pill">
+                <span class="metric-pill-val">60 FPS</span>
+                <span class="metric-pill-label">Hardware Render</span>
+              </div>
+            </div>
+
+            <div class="stage-actions">
+              <button class="btn-primary-metallic" data-trigger="get-website">
+                <span class="btn-shine"></span>
+                <span class="btn-label">Build Your Architecture</span>
+              </button>
+              <button class="btn-secondary-dark" data-trigger="view-cases">
+                Inspect Benchmarks
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STAGE 2: SPATIAL SYSTEMS & LIFT (50% - 74% scroll) -->
+      <!-- Aligned with character standing up commanding the room -->
+      <section class="screw-stage-card stage-spatial" id="stage-2" data-stage="2">
+        <div class="stage-container stage-layout-right">
+          <div class="stage-glass-panel">
+            <div class="stage-header-badge">
+              <span class="pulse-ring purple"></span>
+              <span class="badge-code">02 // 3D SPATIAL ENGINEERING</span>
+            </div>
+
+            <h2 class="stage-headline">
+              Spatial Immersion.<br>
+              <span class="text-gradient-purple">Unmatched Authority.</span>
+            </h2>
+
+            <p class="stage-description">
+              Flat, boring websites belong to the last decade. We engineer interactive 3D spaces with fluid momentum
+              physics and tactile responsiveness that captivate enterprise clients and establish instant category
+              dominance.
+            </p>
+
+            <div class="stage-feature-grid">
+              <div class="feature-tile">
+                <div class="feature-tile-icon cyan"><i data-lucide="orbit"></i></div>
+                <div class="feature-tile-content">
+                  <h4>Kinetic Momentum</h4>
+                  <p>Inertial scroll physics tuned for buttery 60 FPS spatial fluidity.</p>
+                </div>
+              </div>
+              <div class="feature-tile">
+                <div class="feature-tile-icon emerald"><i data-lucide="layers"></i></div>
+                <div class="feature-tile-content">
+                  <h4>Zero Dependency</h4>
+                  <p>High-efficiency custom canvas execution with near-zero bundle overhead.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="stage-actions">
+              <button class="btn-primary-metallic" data-trigger="view-cases">
+                <span class="btn-shine"></span>
+                <span class="btn-label">View 3D Case Studies</span>
+              </button>
+              <button class="btn-secondary-dark" data-trigger="get-website">
+                Get Scope Estimate
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STAGE 3: THE FINALE & LAUNCH (76% - 100% scroll) -->
+      <!-- Aligned with character walking forward between servers into camera foreground -->
+      <section class="screw-stage-card stage-finale" id="stage-3" data-stage="3">
+        <div class="stage-container stage-layout-center">
+          <div class="stage-glass-panel stage-panel-wide">
+            <div class="stage-header-badge center">
+              <span class="pulse-ring emerald"></span>
+              <span class="badge-code">03 // UNFAIR ADVANTAGE</span>
+            </div>
+
+            <h2 class="stage-headline text-center">
+              READY TO LAUNCH<br>
+              <span class="text-gradient-emerald">WHAT'S NEXT?</span>
+            </h2>
+
+            <p class="stage-description text-center max-w-600">
+              Stop settling for commoditized agency templates. We partner with only two high-conviction companies per
+              quarter to engineer flagship digital engines that dominate their market.
+            </p>
+
+            <div class="finale-stats-banner">
+              <div class="finale-stat-item">
+                <span class="stat-big">+180%</span>
+                <span class="stat-caption">Avg. Lift</span>
+              </div>
+              <div class="finale-stat-divider"></div>
+              <div class="finale-stat-item">
+                <span class="stat-big">&lt; 3 Wks</span>
+                <span class="stat-caption">Rapid Sprint</span>
+              </div>
+              <div class="finale-stat-divider"></div>
+              <div class="finale-stat-item">
+                <span class="stat-big">100%</span>
+                <span class="stat-caption">Guaranteed Scope</span>
+              </div>
+            </div>
+
+            <div class="stage-actions justify-center">
+              <button class="btn-primary-metallic btn-large" data-trigger="get-website">
+                <span class="btn-shine"></span>
+                <span class="btn-label">Claim Your Production Slot <i data-lucide="arrow-right"></i></span>
+              </button>
+              <button class="btn-secondary-dark" data-trigger="view-cases">
+                Audit Case Studies
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Helical 3D Screw Stage Nav Indicator (Right edge) -->
+      <aside class="screw-helical-nav" id="screw-helical-nav" aria-label="Narrative Orbit Tracker">
+        <div class="helical-track">
+          <div class="helical-progress-bar" id="helical-progress-bar"></div>
+          <button class="helical-dot active" data-stage="0" aria-label="Go to Chapter 0: Vision">
+            <span class="dot-ring"></span>
+            <span class="dot-label">00 // Vision</span>
+          </button>
+          <button class="helical-dot" data-stage="1" aria-label="Go to Chapter 1: Architecture">
+            <span class="dot-ring"></span>
+            <span class="dot-label">01 // Architecture</span>
+          </button>
+          <button class="helical-dot" data-stage="2" aria-label="Go to Chapter 2: Spatial">
+            <span class="dot-ring"></span>
+            <span class="dot-label">02 // Spatial</span>
+          </button>
+          <button class="helical-dot" data-stage="3" aria-label="Go to Chapter 3: Launch">
+            <span class="dot-ring"></span>
+            <span class="dot-label">03 // Launch</span>
+          </button>
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- Scroll Depth Container for 3D Cinematic Frame Scrub -->
+    <div class="scroll-container" id="scroll-container" aria-hidden="true"></div>
+
+    <!-- MODAL 1: Project Consultation Modal ("Get a website") -->
+    <div class="modal-backdrop" id="project-modal" hidden>
+      <div class="modal-container modal-scrollable" role="dialog" aria-labelledby="project-modal-title"
+        aria-modal="true">
+        <button class="modal-close-btn" id="close-project-modal" aria-label="Close dialog">
+          <i data-lucide="x"></i>
+        </button>
+
+        <!-- Step Flow View -->
+        <div id="project-form-view">
+          <div class="modal-header">
+            <div class="status-pill modal-badge">
+              <i data-lucide="sparkles" class="badge-icon"></i>
+              <span>Project Estimation</span>
+            </div>
+            <h3 class="modal-title" id="project-modal-title">Launch Your Conversion Engine</h3>
+            <p class="modal-desc">Configure your project specifications to receive a guaranteed fixed-scope proposal
+              within 24 hours.</p>
+          </div>
+
+          <!-- Step 1: Project Scope -->
+          <div id="project-step-1" class="step-pane active">
+            <div class="form-group">
+              <label class="form-label">Project Archetype</label>
+              <div class="pill-select-grid" id="project-type-options">
+                <button type="button" class="select-option selected" data-value="High-Converting SaaS">High-Converting
+                  SaaS</button>
+                <button type="button" class="select-option" data-value="Enterprise Brand Platform">Enterprise Brand
+                  Platform</button>
+                <button type="button" class="select-option" data-value="AI / Web3 Launch">AI / Web3 Launch</button>
+                <button type="button" class="select-option" data-value="Conversion Redesign">Conversion
+                  Redesign</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Investment Target</label>
+              <div class="pill-select-grid" id="budget-options">
+                <button type="button" class="select-option" data-value="$10,000 - $15,000">$10,000 - $15,000</button>
+                <button type="button" class="select-option selected" data-value="$15,000 - $30,000">$15,000 -
+                  $30,000</button>
+                <button type="button" class="select-option" data-value="$30,000 - $50,000+">$30,000 - $50,000+</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Deployment Timeline</label>
+              <div class="pill-select-grid" id="timeline-options">
+                <button type="button" class="select-option" data-value="2-3 Weeks (Rapid Sprint)">2-3 Weeks (Rapid
+                  Sprint)</button>
+                <button type="button" class="select-option selected" data-value="3-4 Weeks (Standard)">3-4 Weeks
+                  (Standard)</button>
+                <button type="button" class="select-option" data-value="6+ Weeks (Full Ecosystem)">6+ Weeks (Full
+                  Ecosystem)</button>
+              </div>
+            </div>
+
+            <button type="button" class="modal-btn-submit" id="btn-goto-step-2">
+              Continue to Specifications <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+
+          <!-- Step 2: Contact Info -->
+          <div id="project-step-2" class="step-pane" hidden>
+            <form id="project-contact-form">
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label class="form-label" for="contact-name">Full Name *</label>
+                  <input type="text" id="contact-name" class="form-input" placeholder="Alexander Vance" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contact-email">Corporate Email *</label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="alex@venture.io" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-company">Company / Product *</label>
+                <input type="text" id="contact-company" class="form-input" placeholder="Hyperion Dynamics" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-details">Primary Conversion Goal</label>
+                <textarea id="contact-details" class="form-textarea" rows="3"
+                  placeholder="Briefly describe what needs to be built and current conversion bottlenecks..."></textarea>
+              </div>
+
+              <div class="form-buttons-row">
+                <button type="button" class="modal-btn-back" id="btn-backto-step-1">Back</button>
+                <button type="submit" class="modal-btn-submit">
+                  Submit Project Brief <i data-lucide="check"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Confirmation Screen -->
+        <div id="project-success-view" hidden>
+          <div class="success-box">
+            <div class="success-icon-wrap">
+              <i data-lucide="check-circle-2"></i>
+            </div>
+            <h3 class="modal-title">Brief Received Successfully</h3>
+            <p class="modal-desc">
+              Your project blueprint has been transmitted to our Principal Design Architect. We will review your
+              conversion requirements and deliver a fixed-scope roadmap within 24 hours.
+            </p>
+            <div class="success-summary" id="project-summary-box">
+              <!-- Populated dynamically via JS -->
+            </div>
+            <button type="button" class="modal-btn-submit" id="btn-close-success">Done</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 2: Cases Modal ("View cases" & Stat Boxes) -->
+    <div class="modal-backdrop" id="cases-modal" hidden>
+      <div class="modal-container modal-large modal-scrollable" role="dialog" aria-labelledby="cases-modal-title"
+        aria-modal="true">
+        <button class="modal-close-btn" id="close-cases-modal" aria-label="Close dialog">
+          <i data-lucide="x"></i>
+        </button>
+
+        <div class="modal-header">
+          <div class="status-pill modal-badge">
+            <i data-lucide="award" class="badge-icon"></i>
+            <span>Verified Case Studies</span>
+          </div>
+          <h3 class="modal-title" id="cases-modal-title">Design That Sells — Proof in Numbers</h3>
+          <p class="modal-desc">Explore audited performance metrics from our recent enterprise and high-growth clients.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="cases-filter-tabs" id="cases-tabs">
+          <button class="case-tab active" data-category="all">All Sectors</button>
+          <button class="case-tab" data-category="fintech">FinTech &amp; Web3</button>
+          <button class="case-tab" data-category="enterprise">Enterprise</button>
+          <button class="case-tab" data-category="defense">Cyber &amp; Defense</button>
+          <button class="case-tab" data-category="luxury">Luxury</button>
+        </div>
+
+        <!-- Cases Grid -->
+        <div class="cases-cards-grid" id="cases-grid">
+          <!-- Case 1 -->
+          <div class="case-item-card" data-category="fintech">
+            <div class="case-top">
+              <span class="case-badge">FinTech &amp; Web3 Infrastructure</span>
+              <span class="case-year">2025</span>
+            </div>
+            <h4 class="case-title">Aetheria Protocol</h4>
+            <div class="case-metric-row">
+              <span class="case-highlight">+240%</span>
+              <span class="case-metric-sub">conversion lift on institutional deposits</span>
+            </div>
+            <p class="case-desc">
+              Re-architected positioning and onboarding flow for high-net-worth liquidity providers. Replaced complex
+              technical jargon with high-fidelity 3D visualization and friction-free verification.
+            </p>
+            <div class="case-tags">
+              <span>Brand Positioning</span>
+              <span>3D Interactive</span>
+              <span>Design System</span>
+            </div>
+          </div>
+
+          <!-- Case 2 -->
+          <div class="case-item-card" data-category="enterprise">
+            <div class="case-top">
+              <span class="case-badge">Enterprise Infrastructure</span>
+              <span class="case-year">2025</span>
+            </div>
+            <h4 class="case-title">Hyperion AI Compute</h4>
+            <div class="case-metric-row">
+              <span class="case-highlight">$1.85M</span>
+              <span class="case-metric-sub">in enterprise pipeline within 60 days</span>
+            </div>
+            <p class="case-desc">
+              Engineered a cinematic, futuristic enterprise sales portal with instant GPU cluster reservation calculator
+              and real-time latency benchmark graphics.
+            </p>
+            <div class="case-tags">
+              <span>Enterprise UX</span>
+              <span>Design Engineering</span>
+              <span>Conversion Architecture</span>
+            </div>
+          </div>
+
+          <!-- Case 3 -->
+          <div class="case-item-card" data-category="defense">
+            <div class="case-top">
+              <span class="case-badge">Defense &amp; Cyber-Security</span>
+              <span class="case-year">2024</span>
+            </div>
+            <h4 class="case-title">Novalis Biometrics</h4>
+            <div class="case-metric-row">
+              <span class="case-highlight">+180%</span>
+              <span class="case-metric-sub">qualified executive demo bookings</span>
+            </div>
+            <p class="case-desc">
+              Designed a high-security cyber defense intelligence showcase. Streamlined the conversion funnel from 7
+              steps
+              to 2, accelerating sales velocity.
+            </p>
+            <div class="case-tags">
+              <span>Conversion Strategy</span>
+              <span>Dark Aesthetic</span>
+              <span>Performance Speed</span>
+            </div>
+          </div>
+
+          <!-- Case 4 -->
+          <div class="case-item-card" data-category="luxury">
+            <div class="case-top">
+              <span class="case-badge">Luxury Automotive</span>
+              <span class="case-year">2024</span>
+            </div>
+            <h4 class="case-title">Veloce Hypercars</h4>
+            <div class="case-metric-row">
+              <span class="case-highlight">$2.4M+</span>
+              <span class="case-metric-sub">first-week allocation deposits secured</span>
+            </div>
+            <p class="case-desc">
+              Bespoke vehicle 3D configurator and ultra-luxury launch site that translated raw speed and titanium
+              engineering into immediate collector reservations.
+            </p>
+            <div class="case-tags">
+              <span>Ultra Luxury</span>
+              <span>Configurator</span>
+              <span>Motion Experience</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer-cta">
+          <p>Ready to reproduce these metric gains in your domain?</p>
+          <button type="button" class="btn-primary-metallic" id="cases-book-call-btn">
+            <span class="btn-shine"></span>
+            <span class="btn-label">Book Strategy Call</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 3: Client Portal Sign In Modal -->
+    <div class="modal-backdrop" id="signin-modal" hidden>
+      <div class="modal-container modal-small modal-scrollable" role="dialog" aria-labelledby="signin-modal-title"
+        aria-modal="true">
+        <button class="modal-close-btn" id="close-signin-modal" aria-label="Close dialog">
+          <i data-lucide="x"></i>
+        </button>
+
+        <div id="signin-form-view">
+          <div class="modal-header">
+            <div class="modal-brand-badge">
+              <img src="brand-icon.png" alt="X*FOCUS" class="modal-brand-icon">
+            </div>
+            <h3 class="modal-title" id="signin-modal-title">X*FOCUS Client Portal</h3>
+            <p class="modal-desc">Access active sprint deliverables, staging builds, and conversion telemetry.</p>
+          </div>
+
+          <form id="signin-form" class="space-y-4">
+            <div class="form-group">
+              <label class="form-label" for="signin-email">Authorized Client Email</label>
+              <input type="email" id="signin-email" class="form-input" placeholder="partner@client.com" required>
+            </div>
+
+            <div class="form-group">
+              <div class="label-with-link">
+                <label class="form-label" for="signin-password">Access Key / Password</label>
+                <a href="#" class="form-hint-link" id="btn-forgot-key">Forgot key?</a>
+              </div>
+              <input type="password" id="signin-password" class="form-input" placeholder="••••••••••••" required>
+            </div>
+
+            <button type="submit" class="modal-btn-submit" id="submit-signin">
+              Enter Portal <i data-lucide="arrow-right"></i>
+            </button>
+          </form>
+
+          <div class="sandbox-quick-login">
+            <p class="sandbox-prompt">Testing the interface?</p>
+            <button type="button" class="btn-sandbox-demo" id="btn-sandbox-login">
+              <i data-lucide="user"></i>
+              1-Click Client Sandbox Sign-In
+            </button>
+          </div>
+        </div>
+
+        <!-- Authenticated Portal View -->
+        <div id="signin-authenticated-view" hidden>
+          <div class="portal-authenticated-content">
+            <div class="auth-icon-wrap">
+              <i data-lucide="check-circle-2"></i>
+            </div>
+            <h3 class="modal-title">Welcome to Client Portal</h3>
+            <p class="modal-desc">
+              Signed in as <strong id="portal-user-email">partner@hyperion-ventures.com</strong>. Active sprints
+              deployed
+              to staging.
+            </p>
+
+            <div class="portal-telemetry-card">
+              <div class="telemetry-row">
+                <span class="telemetry-label">Current Sprint:</span>
+                <span class="telemetry-val">Sprint 04 — Checkout Redesign</span>
+              </div>
+              <div class="telemetry-row">
+                <span class="telemetry-label">Figma Source:</span>
+                <span class="telemetry-val mono">v4.8-production</span>
+              </div>
+              <div class="telemetry-row">
+                <span class="telemetry-label">Staging Ping:</span>
+                <span class="telemetry-val highlight-emerald">99.9% 0.12s TTFB</span>
+              </div>
+            </div>
+
+            <button type="button" class="modal-btn-submit" id="btn-logout-portal">Close Portal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 4: Nav View Drawer (About / Services / Pricing) -->
+    <div class="modal-backdrop" id="nav-drawer" hidden>
+      <div class="modal-container modal-medium modal-scrollable" role="dialog" aria-labelledby="nav-drawer-title"
+        aria-modal="true">
+        <button class="modal-close-btn" id="close-nav-drawer" aria-label="Close drawer">
+          <i data-lucide="x"></i>
+        </button>
+
+        <!-- ABOUT PANE -->
+        <div class="drawer-pane" id="drawer-pane-about" hidden>
+          <span class="section-micro-tag">About X*FOCUS</span>
+          <div class="about-brand-showcase">
+            <img src="brand-logo-full.png" alt="X*FOCUS — Websites | Apps | Digital Solutions" class="about-brand-img">
+          </div>
+          <h3 class="drawer-heading" id="nav-drawer-title">Strategy-First Design Engineering</h3>
+          <p class="drawer-desc">
+            Most agencies build pretty digital brochures that fail to convert. We build high-converting conversion
+            engines
+            designed to translate raw visitor attention into high-ticket enterprise contracts and customer lifetime
+            value.
+          </p>
+          <div class="features-grid-2">
+            <div class="feature-card">
+              <i data-lucide="cpu" class="feature-icon"></i>
+              <h4 class="feature-title">Futuristic Precision</h4>
+              <p class="feature-desc">Bespoke typography, 3D spatial fidelity, and micro-interactions tuned for high
+                user
+                retention.</p>
+            </div>
+            <div class="feature-card">
+              <i data-lucide="target" class="feature-icon"></i>
+              <h4 class="feature-title">Math Over Guesswork</h4>
+              <p class="feature-desc">A/B tested narrative structures, scroll friction optimization, and instant value
+                proposition clarity.</p>
+            </div>
+          </div>
+          <button type="button" class="modal-btn-submit drawer-cta-btn" data-trigger="get-website">
+            Inquire About Availability
+          </button>
+        </div>
+
+        <!-- SERVICES PANE -->
+        <div class="drawer-pane" id="drawer-pane-services" hidden>
+          <span class="section-micro-tag">Services</span>
+          <h3 class="drawer-heading">High-Velocity Conversion Services</h3>
+          <div class="services-list">
+            <div class="service-item">
+              <h4 class="service-title"><i data-lucide="zap"></i> Flagship Marketing Websites</h4>
+              <p class="service-desc">End-to-end positioning, custom 3D visuals, and sub-second WebGL performance
+                engineering.</p>
+            </div>
+            <div class="service-item">
+              <h4 class="service-title"><i data-lucide="zap"></i> High-Ticket Conversion Architecture</h4>
+              <p class="service-desc">Funnel restructuring, friction elimination, and interactive product demo journeys.
+              </p>
+            </div>
+            <div class="service-item">
+              <h4 class="service-title"><i data-lucide="zap"></i> Interactive 3D &amp; WebGL Experiences</h4>
+              <p class="service-desc">Bespoke 3D product configurators and cinematic brand storytelling that commands
+                authority.</p>
+            </div>
+            <div class="service-item">
+              <h4 class="service-title"><i data-lucide="zap"></i> Design Systems &amp; Brand Strategy</h4>
+              <p class="service-desc">Comprehensive visual identity, typography pairing, component libraries, and
+                tokens.
+              </p>
+            </div>
+          </div>
+          <button type="button" class="modal-btn-submit drawer-cta-btn" data-trigger="get-website">
+            Book Strategic Consultation
+          </button>
+        </div>
+
+        <!-- PRICING PANE -->
+        <div class="drawer-pane" id="drawer-pane-pricing" hidden>
+          <span class="section-micro-tag">Pricing Tiers</span>
+          <h3 class="drawer-heading">Transparent Fixed-Scope Investment</h3>
+          <p class="drawer-desc">No hidden retainers. Guaranteed deliverables with defined conversion benchmarks.</p>
+          <div class="pricing-cards-grid">
+            <!-- Tier 1 -->
+            <div class="pricing-card">
+              <div>
+                <span class="pricing-tier-name">Growth Sprint</span>
+                <div class="pricing-price">$14,500</div>
+                <p class="pricing-duration">Completed in 3 weeks</p>
+                <ul class="pricing-features">
+                  <li><i data-lucide="check"></i> 5-page custom high-converting web</li>
+                  <li><i data-lucide="check"></i> Bespoke copywriting &amp; positioning</li>
+                  <li><i data-lucide="check"></i> 98+ PageSpeed Core Web Vitals</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Tier 2 -->
+            <div class="pricing-card popular">
+              <div class="popular-badge">Most Popular</div>
+              <div>
+                <span class="pricing-tier-name">Enterprise Flagship</span>
+                <div class="pricing-price">$28,000</div>
+                <p class="pricing-duration">Completed in 5-6 weeks</p>
+                <ul class="pricing-features">
+                  <li><i data-lucide="check"></i> Complete custom digital experience</li>
+                  <li><i data-lucide="check"></i> 3D spatial renders &amp; micro-motion</li>
+                  <li><i data-lucide="check"></i> Advanced conversion funnel &amp; analytics</li>
+                  <li><i data-lucide="check"></i> Complete design system handoff</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="modal-btn-submit drawer-cta-btn" data-trigger="get-website">
+            Claim Next Production Slot
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- JavaScript Modules -->
+    <script src="script.js"></script>
+</body>
+
+</html>
